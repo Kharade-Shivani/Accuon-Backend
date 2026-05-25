@@ -3,7 +3,14 @@ const ServiceSubCategory = require("../models/ServiceSubCategory");
 /* -------------------- CREATE -------------------- */
 exports.createSubCategory = async (req, res) => {
     try {
-        const { categoryId, title, description, image, status } = req.body;
+        const {
+            categoryId,
+            title,
+            description,
+            image,
+            capabilityImage,
+            status,
+        } = req.body;
 
         if (!categoryId || !title || !description) {
             return res.status(400).json({
@@ -17,6 +24,7 @@ exports.createSubCategory = async (req, res) => {
             title,
             description,
             image,
+            capabilityImage,
             status: status || "active",
         });
 
@@ -37,7 +45,7 @@ exports.createSubCategory = async (req, res) => {
 exports.getAllSubCategories = async (req, res) => {
     try {
         const data = await ServiceSubCategory.find()
-            .populate("categoryId", "name") // 🔥 show category name
+            .populate("categoryId", "name")
             .sort({ createdAt: -1 });
 
         res.status(200).json({

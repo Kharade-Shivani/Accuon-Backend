@@ -23,6 +23,10 @@ const serviceSubCategorySchema = new mongoose.Schema(
             type: String,
         },
 
+        capabilityImage: {
+            type: String,
+        },
+
         // status: {
         //     type: String,
         //     enum: ["active", "inactive"],
@@ -32,4 +36,7 @@ const serviceSubCategorySchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-module.exports = mongoose.model("ServiceSubCategory", serviceSubCategorySchema);
+module.exports = mongoose.model(
+    "ServiceSubCategory",
+    serviceSubCategorySchema
+);
