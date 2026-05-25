@@ -1,4 +1,5 @@
-const ImageMaster = require("../models/ImageMaster");
+// const ImageMaster = require("../models/ImageMaster");
+const ImageMaster = require("../models/imageMaster");
 
 /* -------------------------------------------------------------------------- */
 /* 🟢 Create Image Master */
