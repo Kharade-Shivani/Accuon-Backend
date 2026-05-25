@@ -40,8 +40,10 @@ const candidateRoutes = require("./routes/candidateRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
 const serviceSubCategoryRoutes = require("./routes/serviceSubCategoryRoutes");
 const aboutUsRoutes = require("./routes/aboutUsRoutes");
-
-
+const imageMasterRoutes = require("./routes/imageMasterRoutes");
+const statMasterRoutes = require("./routes/statMasterRoutes");
+const accreditationsMasterRoutes = require("./routes/accreditationsMasterRoutes");
+const whyChooseUsMasterRoutes = require("./routes/whyChooseUsMasterRoutes");
 // -------------------- ROUTES USE ------------------------
 app.use("/", bannerRoutes);
 app.use("/", galleryRoutes);
@@ -61,6 +63,10 @@ app.use("/", candidateRoutes);
 app.use("/", uploadRoutes);
 app.use("/", serviceSubCategoryRoutes);
 app.use("/", aboutUsRoutes);
+app.use("/", imageMasterRoutes);
+app.use("/", statMasterRoutes);
+app.use("/", accreditationsMasterRoutes);
+app.use("/", whyChooseUsMasterRoutes);
 
 // Start Server
 app.listen(process.env.Port, () => {
